@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<div style="background-color: #eef0f4">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <div id="logo"><i class="fa fa-rocket"></i></div> <span>ANGULAR 2 PRACTICE</span></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a [routerLink]="['home']" id="homeBtn">Home</a></li>
+            <li><a href="#" id="checkInBtn">Check In</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Hooray!"><i class="fa fa-file-text blackIcon"></i></a></li>
+            <li><a href="#"><i class="fa fa-bell blackIcon"></i></a></li>
+            <li><a href="#" id="profile"><i class="fa fa-user"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="pull-right" id="nav-list">
+                <li><a [routerLink]="['delete']"  class="groupOpt animate"><i class="fa fa-trash-o"></i></a></li>
+                <li><a [routerLink]="['joingroup']" class="groupOpt animate"><i class="fa fa-search"></i></a></li>
+                <li><a [routerLink]="['addgroup']" class="groupOpt animate"><i class="fa fa-users"></i></a></li>
+                <li (click)="toggle()"><a  class="groupOpt last-child"><i class="fa fa-plus"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
